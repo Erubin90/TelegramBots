@@ -22,6 +22,8 @@ import org.telegram.telegrambots.meta.api.interfaces.BotApiObject;
 public class WriteAccessAllowed implements BotApiObject {
 
     private static final String WEB_APP_NAME_FIELD = "web_app_name";
+    public static final String FROM_REQUEST_FIELD = "from_request";
+    public static final String FROM_ATTACHMENT_MENU_FIELD = "from_attachment_menu";
 
     /**
      * Optional.
@@ -29,4 +31,16 @@ public class WriteAccessAllowed implements BotApiObject {
      */
     @JsonProperty(WEB_APP_NAME_FIELD)
     private String webAppName;
+    /**
+     * Optional.
+     * True, if the access was granted after the user accepted an explicit request from a Web App sent by the method requestWriteAccess
+     */
+    @JsonProperty(FROM_REQUEST_FIELD)
+    private Boolean fromRequest;
+    /**
+     * Optional.
+     * True, if the access was granted when the bot was added to the attachment or side menu
+     */
+    @JsonProperty(FROM_ATTACHMENT_MENU_FIELD)
+    private Boolean fromAttachmentMenu;
 }

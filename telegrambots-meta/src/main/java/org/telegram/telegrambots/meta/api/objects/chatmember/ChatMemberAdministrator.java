@@ -44,6 +44,9 @@ public class ChatMemberAdministrator implements ChatMember {
     private static final String CANPINMESSAGES_FIELD = "can_pin_messages";
     private static final String CANMANAGEVIDEOCHATS_FIELD = "can_manage_video_chats";
     private static final String CANMANAGETOPICS_FIELD = "can_manage_topics";
+    private static final String CANPOSTSTORIES_FIELD = "can_post_stories";
+    private static final String CANEDITSTORIES_FIELD = "can_edit_stories";
+    private static final String CANDELETESTORIES_FIELD = "can_delete_stories";
 
     /**
      * The member's status in the chat, always “administrator”
@@ -131,4 +134,22 @@ public class ChatMemberAdministrator implements ChatMember {
      */
     @JsonProperty(CANMANAGETOPICS_FIELD)
     private Boolean canManageTopics;
+    /**
+     * Optional.
+     * True, if the administrator can post stories in the channel; channels only
+     */
+    @JsonProperty(CANPOSTSTORIES_FIELD)
+    private Boolean canPostStories;
+    /**
+     * Optional.
+     * True, if the administrator can edit stories posted by other users; channels only
+     */
+    @JsonProperty(CANEDITSTORIES_FIELD)
+    private Boolean canEditStories;
+    /**
+     * Optional.
+     * True, if the administrator can delete stories posted by other users; channels only
+     */
+    @JsonProperty(CANDELETESTORIES_FIELD)
+    private Boolean canDeleteStories;
 }

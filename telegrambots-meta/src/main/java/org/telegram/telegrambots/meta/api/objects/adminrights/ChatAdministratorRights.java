@@ -31,6 +31,9 @@ public class ChatAdministratorRights implements BotApiObject, Validable {
     private static final String CANEDITMESSAGES_FIELD = "can_edit_messages";
     private static final String CANPINMESSAGES_FIELD = "can_pin_messages";
     private static final String CANMANAGETOPICS_FIELD = "can_manage_topics";
+    private static final String CANPOSTSTORIES_FIELD = "can_post_stories";
+    private static final String CANEDITSTORIES_FIELD = "can_edit_stories";
+    private static final String CANDELETESTORIES_FIELD = "can_delete_stories";
 
     /**
      * True, if the user's presence in the chat is hidden
@@ -109,4 +112,22 @@ public class ChatAdministratorRights implements BotApiObject, Validable {
      */
     @JsonProperty(CANMANAGETOPICS_FIELD)
     private Boolean canManageTopics;
+    /**
+     * Optional.
+     * True, if the administrator can post stories in the channel; channels only
+     */
+    @JsonProperty(CANPOSTSTORIES_FIELD)
+    private Boolean canPostStories;
+    /**
+     * Optional.
+     * True, if the administrator can edit stories posted by other users; channels only
+     */
+    @JsonProperty(CANEDITSTORIES_FIELD)
+    private Boolean canEditStories;
+    /**
+     * Optional.
+     * True, if the administrator can delete stories posted by other users; channels only
+     */
+    @JsonProperty(CANDELETESTORIES_FIELD)
+    private Boolean canDeleteStories;
 }

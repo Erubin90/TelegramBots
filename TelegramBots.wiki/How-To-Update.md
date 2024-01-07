@@ -1,3 +1,7 @@
+### <a id="6.9.0"></a>To version 6.9.0 ###
+1. Added the fields `canPostStories`, `canEditStories` and `canDeleteStories` to the classes `ChatMemberAdministrator`, `ChatAdministratorRights` and `promoteChatMember` .
+2. Added the fields `from_request` and `from_attachment_menu` to the class `WriteAccessAllowed`.
+
 ### <a id="6.8.0"></a>To version 6.8.0 ###
 1. Api methods with thumbnails have changed the field, use getThumbnail()/setThumbnail() instead of getThumb()/setThumb() 
 2. In `AddStickerToSet`/`CreateNewStickerSet`/`UploadStickerFile`/etc, use field `sticker` instead of the deprecated fields.

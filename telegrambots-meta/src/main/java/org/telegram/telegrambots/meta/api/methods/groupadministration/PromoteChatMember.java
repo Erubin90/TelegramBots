@@ -47,6 +47,9 @@ public class PromoteChatMember extends BotApiMethodBoolean {
     private static final String CANMANAGECHAT_FIELD = "can_manage_chat";
     private static final String CANMANAGEVIDEOCHATS_FIELD = "can_manage_video_chats";
     private static final String CANMANAGETOPICS_FIELD = "can_manage_topics";
+    private static final String CANPOSTSTORIES_FIELD = "can_post_stories";
+    private static final String CANEDITSTORIES_FIELD = "can_edit_stories";
+    private static final String CANDELETESTORIES_FIELD = "can_delete_stories";
 
     @JsonProperty(CHATID_FIELD)
     @NonNull
@@ -94,6 +97,24 @@ public class PromoteChatMember extends BotApiMethodBoolean {
      */
     @JsonProperty(CANMANAGETOPICS_FIELD)
     private Boolean canManageTopics;
+    /**
+     * Optional.
+     * Pass True if the administrator can post stories in the channel; channels only
+     */
+    @JsonProperty(CANPOSTSTORIES_FIELD)
+    private Boolean canPostStories;
+    /**
+     * Optional.
+     * Pass True if the administrator can edit stories posted by other users; channels only
+     */
+    @JsonProperty(CANEDITSTORIES_FIELD)
+    private Boolean canEditStories;
+    /**
+     * Optional.
+     * Pass True if the administrator can delete stories posted by other users; channels only
+     */
+    @JsonProperty(CANDELETESTORIES_FIELD)
+    private Boolean canDeleteStories;
 
     @Tolerate
     public void setChatId(@NonNull Long chatId) {
